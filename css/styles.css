@@ -68,7 +68,7 @@ img {
   font-size: 18px;
   font-weight: 700;
   line-height: 1.17; /* 116.667% */
-  letter-spacing: 0.54px;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
   margin-right: 76px;
@@ -82,8 +82,8 @@ img {
 .nav-points {
   font-size: 16px;
   font-weight: 500;
-  line-height: 24px; /* 150% */
-  letter-spacing: 0.32px;
+  line-height: 1.5; /* 150% */
+  letter-spacing: 0.02em;
   padding: 24px 0;
 }
 .nav-points:active,
@@ -98,8 +98,8 @@ img {
 .contact-links {
   color: #434455;
   font-size: 16px;
-  line-height: 24px; /* 150% */
-  letter-spacing: 0.32px;
+  line-height: 1.5; /* 150% */
+  letter-spacing: 0.02em;
 }
 .contact-links:hover,
 .contact-links:focus {
@@ -123,6 +123,15 @@ img {
 .main-title-section {
   padding: 188px 0;
   background-color: #2e2f42;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(/images/background-main-title.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 1440px;
 }
 
 .main-title {
@@ -131,7 +140,7 @@ img {
   font-size: 56px;
   font-weight: 700;
   line-height: 1.07;
-  letter-spacing: 1.12px;
+  letter-spacing: 0.02em;
   max-width: 496px;
 }
 .order-service-btn {
@@ -143,8 +152,8 @@ img {
   /* Button Text */
   font-size: 16px;
   font-weight: 500;
-  line-height: 24px; /* 150% */
-  letter-spacing: 0.64px;
+  line-height: 1.5; /* 150% */
+  letter-spacing: 0.04em;
   min-width: 169px;
   height: 56px;
   border: none;
@@ -162,8 +171,8 @@ img {
 .studio-subtitle {
   font-size: 20px;
   font-weight: 500;
-  line-height: 24px; /* 120% */
-  letter-spacing: 0.4px;
+  line-height: 1.2; /* 120% */
+  letter-spacing: 0.02em;
   color: #2e2f42;
   margin-bottom: 8px;
 }
@@ -192,8 +201,8 @@ img {
 .studio-dscr {
   color: #434455;
   font-size: 16px;
-  line-height: 24px; /* 150% */
-  letter-spacing: 0.32px;
+  line-height: 1.5; /* 150% */
+  letter-spacing: 0.02em;
 }
 
 /* section 3 */
@@ -211,7 +220,7 @@ img {
   font-size: 36px;
   font-weight: 700;
   line-height: 1.11;
-  letter-spacing: 0.72px;
+  letter-spacing: 0.02em;
   text-transform: capitalize;
   color: #2e2f42;
   margin-bottom: 72px;
@@ -232,8 +241,8 @@ img {
   text-align: center;
   font-size: 20px;
   font-weight: 500;
-  line-height: 24px; /* 120% */
-  letter-spacing: 0.4px;
+  line-height: 1.2; /* 120% */
+  letter-spacing: 0.02em;
   color: #2e2f42;
   margin-bottom: 8px;
 }
@@ -241,8 +250,8 @@ img {
   color: #434455;
   text-align: center;
   font-size: 16px;
-  line-height: 24px; /* 150% */
-  letter-spacing: 0.32px;
+  line-height: 1.5; /* 150% */
+  letter-spacing: 0.02em;
 }
 
 /* section 4 */
@@ -274,24 +283,24 @@ img {
 .portfolio-subtitle {
   font-size: 20px;
   font-weight: 500;
-  line-height: 24px; /* 120% */
-  letter-spacing: 0.4px;
+  line-height: 1.2; /* 120% */
+  letter-spacing: 0.02em;
   color: #2e2f42;
   margin-bottom: 8px;
 }
 .portfolio-dscr {
   color: #434455;
   font-size: 16px;
-  line-height: 24px; /* 150% */
-  letter-spacing: 0.32px;
+  line-height: 1.5; /* 150% */
+  letter-spacing: 0.02em;
 }
 
 /* footer */
 .footer-text {
   color: #f4f4fd;
   font-size: 16px;
-  line-height: 24px; /* 150% */
-  letter-spacing: 0.32px;
+  line-height: 1.5; /* 150% */
+  letter-spacing: 0.02em;
   width: 264px;
 }
 .footer-style {
@@ -312,7 +321,7 @@ img {
   font-size: 18px;
   font-weight: 700;
   line-height: 1.17;
-  letter-spacing: 0.54px;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   display: inline-block;
 }
