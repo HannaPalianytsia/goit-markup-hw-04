@@ -176,6 +176,12 @@ img {
   color: #2e2f42;
   margin-bottom: 8px;
 }
+.dscr-icon {
+  border-radius: 4px;
+  border: 1px solid #8e8f99;
+  background: #f4f4fd;
+  padding: 24px 100px;
+}
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -252,6 +258,25 @@ img {
   font-size: 16px;
   line-height: 1.5; /* 150% */
   letter-spacing: 0.02em;
+  margin-bottom: 8px;
+}
+.team-icon {
+  fill: none;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  padding: 12px;
+}
+.team-icons {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+.team-card:hover .team-icon,
+.team-card:focus .team-icon {
+  background-color: #404bbf;
 }
 
 /* section 4 */
@@ -313,10 +338,9 @@ img {
   padding: 100px 0;
 }
 .footer-style .container {
-  flex-direction: column;
-  /* gap: 17.5px; */
-  /* padding-right: 1020px;
-  padding-left: 156px; */
+  display: flex;
+  flex-direction: row;
+  gap: 120px;
 }
 
 .logo-footer {
@@ -332,4 +356,30 @@ img {
 }
 .studio-logo-foot {
   color: #f4f4fd;
+}
+.footer-social-title {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
+}
+.footer-icon {
+  fill: none;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  padding: 8px;
+}
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+.footer-icon:hover,
+.footer-icon:focus {
+  background-color: #31d0aa;
 }
