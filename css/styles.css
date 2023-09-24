@@ -50,7 +50,25 @@ img {
 }
 .page-header {
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 2px 1px 0px rgba(46, 47, 66, 0.08);
 }
+.nav-studio {
+  position: relative;
+  color: #404bbf;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.nav-studio::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 4px;
+  background-color: #404bbf;
+  border-radius: 2px;
+}
+
 .navigation {
   display: flex;
   align-items: center;
@@ -100,6 +118,7 @@ img {
   font-size: 16px;
   line-height: 1.5; /* 150% */
   letter-spacing: 0.02em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-links:hover,
 .contact-links:focus {
@@ -119,9 +138,8 @@ img {
 .main-title-section .container {
   display: flex;
   gap: 48px;
-}
-.main-title-section {
   padding: 188px 0;
+  max-width: 1440px;
   background-color: #2e2f42;
   background-image: linear-gradient(
       to bottom,
@@ -130,8 +148,8 @@ img {
     ),
     url(/images/background-main-title.jpg);
   background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 1440px;
+  background-position: center;
+  background-size: cover;
 }
 
 .main-title {
@@ -158,6 +176,7 @@ img {
   height: 56px;
   border: none;
   border-radius: 4px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .order-service-btn:hover,
 .order-service-btn:focus {
@@ -177,10 +196,14 @@ img {
   margin-bottom: 8px;
 }
 .dscr-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 112px;
   border-radius: 4px;
   border: 1px solid #8e8f99;
-  background: #f4f4fd;
-  padding: 24px 100px;
+  background-color: #f4f4fd;
+  margin-bottom: 8px;
 }
 .visually-hidden {
   position: absolute;
@@ -260,25 +283,34 @@ img {
   letter-spacing: 0.02em;
   margin-bottom: 8px;
 }
-.team-icon {
-  fill: none;
-  width: 40px;
-  height: 40px;
-  flex-shrink: 0;
-  background-color: #4d5ae5;
-  border-radius: 50%;
-  padding: 12px;
-}
+
 .team-icons {
   display: flex;
   justify-content: center;
   gap: 24px;
 }
-.team-card:hover .team-icon,
-.team-card:focus .team-icon {
-  background-color: #404bbf;
+.team-icon {
+  width: 40px;
+  height: 40px;
 }
 
+.team-social-links {
+  width: 100%;
+  height: 100%;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.team-social-links:hover,
+.team-social-links:focus {
+  background-color: #404bbf;
+}
+.team-svg {
+  fill: #f4f4fd;
+}
 /* section 4 */
 .portfolio-section {
   padding-top: 120px;
@@ -293,6 +325,7 @@ img {
 .portfolio-card {
   width: calc((100% - 48px) / 3);
   overflow: hidden;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-card:hover {
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
@@ -328,28 +361,25 @@ img {
   position: relative;
   overflow: hidden;
 }
-.portfolio-overlay {
+.overlay-text {
   position: absolute;
-  background-color: #4d5ae5;
-
   color: #f4f4fd;
+  background-color: #4d5ae5;
   font-size: 16px;
   line-height: 1.5; /* 150% */
   letter-spacing: 0.02em;
-  padding-top: 40px;
-  padding-left: 32px;
-  padding-right: 32px;
+  padding: 40px 32px;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.portfolio-card:hover .portfolio-overlay {
-  transform: translateY(0);
+.portfolio-card:hover .overlay-text {
+  transform: translateY(0%);
 }
+
 /* footer */
 .footer-text {
   color: #f4f4fd;
@@ -365,7 +395,8 @@ img {
 .footer-style .container {
   display: flex;
   flex-direction: row;
-  gap: 120px;
+  /* gap: 120px; */
+  align-items: baseline;
 }
 
 .logo-footer {
@@ -382,6 +413,9 @@ img {
 .studio-logo-foot {
   color: #f4f4fd;
 }
+.logo-footer-container {
+  margin-right: 120px;
+}
 .footer-social-title {
   color: #fff;
   font-size: 16px;
@@ -390,21 +424,29 @@ img {
   letter-spacing: 0.02em;
   margin-bottom: 16px;
 }
+.footer-links {
+  width: 100%;
+  height: 100%;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .footer-icon {
   fill: none;
   width: 40px;
   height: 40px;
-  flex-shrink: 0;
-  background-color: #4d5ae5;
-  border-radius: 50%;
-  padding: 8px;
 }
 .footer-icons {
   display: flex;
   justify-content: center;
   gap: 16px;
 }
-.footer-icon:hover,
-.footer-icon:focus {
+.footer-links:hover,
+.footer-links:focus {
   background-color: #31d0aa;
+}
+.footer-svg {
+  fill: #f4f4fd;
 }
